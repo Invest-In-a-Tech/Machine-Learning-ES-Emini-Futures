@@ -449,7 +449,7 @@ The process_data method is then called on this instance. This method:
     2.) Converts the 'Date' column to a datetime object.
     3.) Filters the data to focus on a specific trading session, likely the main trading hours.
 """
-processor = DataFrameProcessor("E:\\Codespaces\\SierraCharts-ML-Project\\historical_data\\ES.FootPrint.Renko2.df.csv")
+processor = DataFrameProcessor("\ES.FootPrint.Renko2.df.csv")
 df = processor.process_data()
 
 ################################################
@@ -521,7 +521,7 @@ print(f"After scaling, training data shape: {features_train_scaled.shape}, test 
 The fitted MinMaxScaler is saved to disk using joblib.dump(). This is crucial because, during inference or real-time trading, 
 any new data must be scaled using the same scaler that was fit on the training data.
 """
-scaler_filename = "E:\\Codespaces\\SierraCharts-ML-Project\\sc_trading_system\\model3\\scaler_v4"
+scaler_filename = ""
 joblib.dump(scaler, scaler_filename)
 
 #############################################
@@ -584,11 +584,11 @@ After training, the model is saved to disk using the specified path. This allows
 The saved model will contain the learned policy, and it can be loaded back to make predictions, continue training, or evaluate its 
 performance on new data.
 """
-model.save("E:\\Codespaces\\SierraCharts-ML-Project\\sc_trading_system\\model3\\model_v4")
+model.save()
 
 ##################################################
 #### Save reward/penalty parameters to a file ####
-file_path2 = "E:\\Codespaces\\SierraCharts-ML-Project\\sc_trading_system\\model3\\reward_parameters.txt"
+file_path2 = ""
 with open(file_path2, "w") as param_file:
     param_file.write("Reward and Penalty Parameters:\n\n")
     param_file.write(f"Trade Reward Bonus (Profitable): {env.trade_reward_bonus}\n")
