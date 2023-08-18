@@ -554,7 +554,7 @@ effective RL algorithm for training agents in various environments.
     1.) "MlpPolicy": This specifies the type of neural network policy to be used with the PPO algorithm. In this case, 
         it's a multi-layer perceptron (MLP) policy.
     2.) env: This is the environment in which the agent will be trained, which is our EnhancedTradingEnv.
-    3/) verbose=1: This setting ensures that the training process will print out logs so you can monitor the training.
+    3.) verbose=1: This setting ensures that the training process will print out logs so you can monitor the training.
 
 There are also hyperparameters that I commented-out like learning_rate, n_steps, n_epochs, etc. These can be uncommented 
 and adjusted to fine-tune the PPO algorithm's behavior.
